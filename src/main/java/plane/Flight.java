@@ -64,4 +64,8 @@ public class Flight {
             passengers.add(passenger);
         }
     }
+
+    public int returnAvailableSeats() {
+        return plane.getPlaneType().getCapacity() - passengers.size();
+    }
 }

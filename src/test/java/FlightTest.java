@@ -72,4 +72,17 @@ public class FlightTest {
     public void hasDepartureTime(){
         assertEquals("16:45", flight.getDepartureTime());
     }
+
+    //Advanced Methods
+
+    @Test
+    public void canAddPassengers(){
+        flight.bookPassenger(passenger);
+        assertEquals(1, flight.getPassengers().size());
+    }
+
+    @Test
+    public void canReturnAvailableSeats(){
+        assertEquals(4, flight.returnAvailableSeats());
+    }
 }
