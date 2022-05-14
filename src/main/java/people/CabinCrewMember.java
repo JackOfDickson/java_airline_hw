@@ -1,10 +1,10 @@
 package people;
 
-public class CabinCrew extends Person{
+public class CabinCrewMember extends Person{
 
     private RankType rankType;
 
-    public CabinCrew(String name, RankType rankType) {
+    public CabinCrewMember(String name, RankType rankType) {
         super(name);
         this.rankType = rankType;
     }

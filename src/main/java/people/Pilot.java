@@ -1,6 +1,6 @@
 package people;
 
-public class Pilot extends CabinCrew{
+public class Pilot extends CabinCrewMember {
 
     private String pilotLicence;
 

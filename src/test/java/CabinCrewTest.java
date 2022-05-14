@@ -1,17 +1,17 @@
 import org.junit.Before;
 import org.junit.Test;
-import people.CabinCrew;
+import people.CabinCrewMember;
 import people.RankType;
 
 import static org.junit.Assert.assertEquals;
 
 public class CabinCrewTest {
 
-    CabinCrew cabinCrew;
+    CabinCrewMember cabinCrew;
 
     @Before
     public void before(){
-        cabinCrew = new CabinCrew("Jane", RankType.FlightAttendant);
+        cabinCrew = new CabinCrewMember("Jane", RankType.FlightAttendant);
     }
 
     @Test
