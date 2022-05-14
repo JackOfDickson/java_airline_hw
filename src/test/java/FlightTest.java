@@ -8,8 +8,7 @@ import plane.Flight;
 import plane.Plane;
 import plane.PlaneType;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
 
 import static org.junit.Assert.assertEquals;
 
@@ -23,6 +22,7 @@ public class FlightTest {
     Passenger passenger;
     Plane plane;
     Flight flight;
+    Date date;
 
     @Before
     public void before(){
@@ -33,6 +33,7 @@ public class FlightTest {
         cabinCrewArray = new ArrayList<>(Arrays.asList(cabinCrewMember, cabinCrewMember1));
         passenger = new Passenger("Steven", 1);
         plane = new Plane(PlaneType.BOEING747);
+        date = new Date(2022,0,26,16,30);
 
         flight = new Flight(
                 cockpitCrew,
@@ -40,7 +41,7 @@ public class FlightTest {
                 plane,
                 "12A",
                 "EDI",
-                "16:45"
+                date
                 );
     }
     @Test
@@ -70,7 +71,7 @@ public class FlightTest {
 
     @Test
     public void hasDepartureTime(){
-        assertEquals("16:45", flight.getDepartureTime());
+        assertEquals("Thu Jan 26 16:30:00 GMT 3922", flight.getDepartureTime().toString());
     }
 
     //Advanced Methods

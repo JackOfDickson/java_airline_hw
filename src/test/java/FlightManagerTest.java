@@ -11,6 +11,7 @@ import plane.PlaneType;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 
 import static org.junit.Assert.assertEquals;
 
@@ -26,6 +27,7 @@ public class FlightManagerTest {
     Plane plane;
     Flight flight;
     FlightManager flightManager;
+    Date date;
 
     @Before
     public void before(){
@@ -37,6 +39,7 @@ public class FlightManagerTest {
         passenger = new Passenger("Steven", 2);
         passenger1 = new Passenger("Carl", 5);
         plane = new Plane(PlaneType.BOEING747);
+        date = new Date(2022,0,26,16,30);
 
         flight = new Flight(
                 cockpitCrew,
@@ -44,7 +47,7 @@ public class FlightManagerTest {
                 plane,
                 "12A",
                 "EDI",
-                "16:45"
+                date
         );
         flightManager = new FlightManager(flight);
 

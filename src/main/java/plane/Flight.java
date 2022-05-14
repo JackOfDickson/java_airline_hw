@@ -5,6 +5,7 @@ import people.Passenger;
 import people.Pilot;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Flight {
     private ArrayList<Pilot> cockpitCrew;
@@ -13,11 +14,11 @@ public class Flight {
     private Plane plane;
     private String flightNumber;
     private String destination;
-    private String departureTime;
+    private Date departureTime;
 
     //CONSTRUCTOR
 
-    public Flight(ArrayList<Pilot> cockpitCrew, ArrayList<CabinCrewMember> cabinCrew, Plane plane, String flightNumber, String destination, String departureTime) {
+    public Flight(ArrayList<Pilot> cockpitCrew, ArrayList<CabinCrewMember> cabinCrew, Plane plane, String flightNumber, String destination, Date departureTime) {
         this.cockpitCrew = cockpitCrew;
         this.cabinCrew = cabinCrew;
         this.plane = plane;
@@ -53,7 +54,7 @@ public class Flight {
         return destination;
     }
 
-    public String getDepartureTime() {
+    public Date getDepartureTime() {
         return departureTime;
     }
 
