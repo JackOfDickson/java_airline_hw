@@ -1,7 +1,5 @@
 package people;
 
-import people.Person;
-
 public class Passenger extends Person{
 
     private int numberOfBags;

@@ -1,8 +1,8 @@
 package plane;
 
 public enum PlaneType {
-    BOEING747(4, 125.00),
-    AIRBUS(5,150.00);
+    BOEING747(4, 20),
+    AIRBUS(5,30);
 
     //capacity = passenger capacity
     private final int capacity;
