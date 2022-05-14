@@ -23,4 +23,9 @@ public class CabinCrewTest {
     public void hasRank(){
         assertEquals(RankType.FlightAttendant, cabinCrew.getRankType());
     }
+
+    @Test
+    public void canRelayMessage(){
+        assertEquals("This is an announcement!", cabinCrew.relayMessage());
+    }
 }

@@ -12,4 +12,10 @@ public class CabinCrewMember extends Person{
     public RankType getRankType() {
         return rankType;
     }
+
+    //Advanced Methods
+
+    public String relayMessage() {
+        return "This is an announcement!";
+    }
 }
