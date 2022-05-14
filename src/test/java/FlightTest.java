@@ -81,6 +81,16 @@ public class FlightTest {
         assertEquals(1, flight.getPassengers().size());
     }
 
+    @Test public void cannotAddPassengersBeyondCapacity(){
+        //tries to add 5 passengers but plane has capacity of 4
+        flight.bookPassenger(passenger);
+        flight.bookPassenger(passenger);
+        flight.bookPassenger(passenger);
+        flight.bookPassenger(passenger);
+        flight.bookPassenger(passenger);
+        assertEquals(4, flight.getPassengers().size());
+    }
+
     @Test
     public void canReturnAvailableSeats(){
         assertEquals(4, flight.returnAvailableSeats());
